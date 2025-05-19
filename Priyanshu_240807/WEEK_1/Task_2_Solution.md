@@ -91,3 +91,5 @@ for line in lines:
     To detecting edges and print lines
     link (Canny Edge Detection) - https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html#autotoc_md1302
     link (Hough Line Transform) - https://docs.opencv.org/4.x/d6/d10/tutorial_py_houghlines.html
+
+    
