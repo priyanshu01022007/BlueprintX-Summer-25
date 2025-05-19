@@ -96,15 +96,15 @@ for line in lines:
         slope = (y2 - y1) / (x2 - x1)
     draw.line(pt1=(x1, y1), pt2=(x2, y2), color=(255, 255, 255), thickness=1)
     imshow(Line)
-    
-## ***Resources/References***
-## 1. **RANSAC Regression**
+
+***Resources/References***
+1. **RANSAC Regression**
     It helped implement robust line fitting that can reject outliers.
     link - https://www.youtube.com/watch?v=BHNNz6jCuHw
-## 2. **Sobel Edge Detection**
+2. **Sobel Edge Detection**
     Used to compute horizontal and vertical gradients
     link - https://www.youtube.com/watch?v=Yz7h9L4gecQ
-## 3. **Canny and Hough Transform**
+3. **Canny and Hough Transform**
     To detecting edges and print lines
     link (Canny Edge Detection) - https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html#autotoc_md1302
     link (Hough Line Transform) - https://docs.opencv.org/4.x/d6/d10/tutorial_py_houghlines.html
