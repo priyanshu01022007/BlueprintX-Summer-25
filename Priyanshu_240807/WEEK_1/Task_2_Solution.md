@@ -45,7 +45,7 @@
 
           slope = (y2 - y1)/(x2 - x1)
 
-***Peudocode***
+**Peudocode**
 * step 1: Read and preprocess
     img = read_image('PATH_OF_IMAGE')
     gray = cvtColor(img, COLOR_BGR2GRAY)
