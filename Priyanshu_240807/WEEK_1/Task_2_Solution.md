@@ -96,7 +96,7 @@ for line in lines:
         slope = (y2 - y1) / (x2 - x1)
     draw.line(pt1=(x1, y1), pt2=(x2, y2), color=(255, 255, 255), thickness=1)
     imshow(Line)
-
+```
 ***Resources/References***
 1. **RANSAC Regression**
     It helped implement robust line fitting that can reject outliers.
