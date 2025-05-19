@@ -47,38 +47,38 @@
 
 ***Peudocode***
 * step 1: Read and preprocess
-img = read_image('PATH_OF_IMAGE')
-gray = cvtColor(img, COLOR_BGR2GRAY)
+    img = read_image('PATH_OF_IMAGE')
+    gray = cvtColor(img, COLOR_BGR2GRAY)
 
 * step 2: Apply Gradient filter
-Gx = sobel(img, axis='x')
-Gy = sobel(img, axis='y')
-G = sqrt( (Gx**2) + (Gy**2) )
+    Gx = sobel(img, axis='x')
+    Gy = sobel(img, axis='y')
+    G = sqrt( (Gx**2) + (Gy**2) )
 
 * step 3: Threshold to get edges
-edges = G > Threshold
-edges_points = get_nonzero_coordinates(edges)
+        edges = G > Threshold
+        edges_points = get_nonzero_coordinates(edges)
 
 * step 4: Fit lines using RANSAC
-while edge_point != 0:
-    line_model = run_RANSAC(edge_points)
-    inliers = get_points_close_to_line(line_model, edge_points)
+    while edge_point != 0:
+        line_model = run_RANSAC(edge_points)
+        inliers = get_points_close_to_line(line_model, edge_points)
 
-    if len(inliers) < MIN_INLIERS:
-        break
+        if len(inliers) < MIN_INLIERS:
+           break
 
-    lines.append(line_model)
-    edge_points = edge_point - inliers
+        lines.append(line_model)
+        edge_points = edge_point - inliers
 
 * Step 5: output
-for line in lines:
-    x1, y1, x2, y2 = get_line_endpoints(line)
-    if x1 == x2:
-       slope = 'undefine'
-    else:
-       slope = (y2-y1)/(x2-x1)
-    line = draw.line(pt1= (x1, y1), pt=(x2, y2), color = (255, 255, 255), thickness = 1)
-    imshow(Line)
+    for line in lines:
+        x1, y1, x2, y2 = get_line_endpoints(line)
+        if x1 == x2:
+           slope = 'undefine'
+        else:
+           slope = (y2-y1)/(x2-x1)
+        line = draw.line(pt1= (x1, y1), pt=(x2, y2), color = (255, 255,     255), thickness = 1)
+       imshow(Line)
 
 ***Resources/References***
 1. **RANSAC Regression**
